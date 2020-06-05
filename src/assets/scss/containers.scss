@@ -1,0 +1,14 @@
+.container {
+    margin: auto;
+    width: calc(100% - 30px);
+    max-width: 933px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    background-color: var(--boxBG);
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+}

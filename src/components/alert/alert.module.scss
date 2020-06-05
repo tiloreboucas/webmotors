@@ -1,0 +1,48 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($color: (#000), $alpha: .5);
+}
+
+.content {
+    display: block;
+    color: var(--primaryColor);
+    font-size: 14px;
+    width: 90%;
+    max-width: 450px;
+
+    strong,
+    span {
+        display: block;
+        word-wrap: break-word;
+    }
+
+    strong {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    span {
+        color: var(--textColor);
+    }
+
+    button {
+        display: block;
+        width: 100px;
+        margin: 16px auto 0;
+        padding: 8px 16px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 3px;
+        background-color: var(--primaryColor);
+        color: var(--buttonColor);
+    }
+}

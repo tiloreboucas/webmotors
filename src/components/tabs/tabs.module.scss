@@ -1,0 +1,58 @@
+.wrapper {
+
+}
+
+.button {
+    padding: 16px;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button-icon {
+    display: inline-block;
+    width: 32px;
+    
+    svg {
+        width: 20px;
+        color: var(--fontColor);
+    }
+}
+
+.button-text {
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--fontColor);
+    font-size: 11px;
+    line-height: 14px;
+    display: inline-block;
+
+    strong {
+        display: block;
+        font-size: 22px;
+        font-weight: normal;
+        padding-top: 4px;
+    }
+}
+
+// Botão Ativo
+.button[aria-selected=true] {
+    border-color: var(--primaryColor);
+    .button-icon svg,
+    .button-text strong {
+        color: var(--primaryColor);
+    }
+}
+
+
+.list {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+@media (min-width: 768px) {
+    .list {
+        justify-content: start;
+    }
+}

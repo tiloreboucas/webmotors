@@ -1,0 +1,28 @@
+.navigation {
+    margin-bottom: 24px;    
+}
+
+.link {
+    border: 2px solid var(--linkColor);
+    box-sizing: border-box;
+    border-radius: 3px;
+    line-height: 28px;
+    padding: 8px;
+    max-width: 188px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 13px;
+}
+
+@media (min-width: 768px) {
+    .navigation {
+        position: relative;
+    }
+
+    .link {
+        position: absolute;
+        top: 16px;
+        right: 0;
+    }
+}

@@ -1,0 +1,103 @@
+@mixin disable {
+  &:disabled {
+    background-color: var(--disabledBG);
+    color: var(--disabledColor);
+    cursor: not-allowed;
+  }
+}
+
+@mixin field {
+  border: 1px solid var(--borderColor);
+  background-color: var(--formInputBG);
+  border-radius: 3px;
+  color: var(--fontColor);
+}
+
+.field-container {
+  margin-bottom: 16px;
+  display: inline-block;
+  width: 100%;
+}
+
+input.text {
+  appearance: none;
+  line-height: 17px;
+  width: 100%;
+  padding: 10px;
+
+  @include field;
+  @include disable;
+}
+
+.checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 16px;
+  width: auto;
+
+  .field {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    appearance: none;
+    position: relative;
+
+    @include field;
+
+    &:checked:before {
+      color: var(--primaryColor);
+      content: "\2714";
+      font-size: 12px;
+      position: absolute;
+      top: 0;
+      left: 2px;
+    }
+
+    @include disable;
+  }
+
+  .label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    font-size: 12px;
+  }
+}
+
+.select {
+  line-height: 14px;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+
+  @include field;
+  @include disable;
+}
+
+button[type="submit"] {
+  border: 2px solid var(--primaryColor);
+  background-color: var(--primaryColor);
+  color: var(--buttonColor);
+  box-sizing: border-box;
+  border-radius: 3px;
+  line-height: 28px;
+  padding: 8px;
+  max-width: 188px;
+  display: block;
+  text-align: center;
+  margin: 16px auto 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .field-container {
+    width: auto;
+
+    + .field-container {
+      margin-left: 16px;
+    }
+  }
+}
