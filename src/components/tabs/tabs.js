@@ -2,7 +2,7 @@ import React from 'react';
 import Style from './tabs.module.scss';
 
 const Button = props => {
-    return <button role="tab" aria-selected={props.selected || false} className={Style.button} aria-controls={`panel-${props.id}`} id={`tab-${props.id}`} tabIndex={props.index}>
+    return <button role="tab" disabled={props.disabled} aria-selected={props.selected || false} className={Style.button} aria-controls={`panel-${props.id}`} id={`tab-${props.id}`} tabIndex={props.index}>
         <i className={`${Style['button-icon']} ${Style[`icon-${props.id}`]}`}>
             {props.icon}
         </i>

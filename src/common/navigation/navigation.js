@@ -14,7 +14,7 @@ const Navigation = () => {
                 <Tabs.Button icon={<IconCar />} selected id="car">
                     Comprar <strong>Carro</strong>
                 </Tabs.Button>
-                <Tabs.Button icon={<IconMotorcycle />} id="motorcycle">
+                <Tabs.Button disabled icon={<IconMotorcycle />} id="motorcycle">
                     Comprar <strong>Moto</strong>
                 </Tabs.Button>
             </Tabs.List>
